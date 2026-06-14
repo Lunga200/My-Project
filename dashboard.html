@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetBuddy Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header class="top-header">
+            <div>
+                <h1>BudgetBuddy</h1>
+                <p>Your personal finance dashboard.</p>
+            </div>
+            <nav class="top-nav">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="transactions.html">Transactions</a>
+                <a href="wallet.html">Wallet</a>
+                <a href="goals.html">Goals</a>
+                <a href="reports.html">Reports</a>
+                <a href="ai-assistant.html">AI Assistant</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+        </header>
+
+        <section class="mascot-card">
+            <h2>Hi there 👋</h2>
+            <p>Welcome back to BudgetBuddy.</p>
+        </section>
+
+        <section class="profile-card">
+            <img src="https://via.placeholder.com/100" alt="Profile">
+            <h2 id="profileName">Guest</h2>
+            <p id="profileEmail"></p>
+            <button id="darkModeBtn">Toggle Theme</button>
+            <button onclick="logout()">Logout</button>
+        </section>
+
+        <section class="cards">
+            <div class="card">
+                <h3>Balance</h3>
+                <p>R5,000</p>
+            </div>
+            <div class="card">
+                <h3>Income</h3>
+                <p>R8,000</p>
+            </div>
+            <div class="card">
+                <h3>Expenses</h3>
+                <p>R3,000</p>
+            </div>
+            <div class="card">
+                <h3>Savings</h3>
+                <p>R2,000</p>
+            </div>
+        </section>
+
+        <section class="transactions">
+            <h2>Recent Transactions</h2>
+            <ul id="transactionList"></ul>
+        </section>
+
+        <section class="goal-card">
+            <h2>🎯 Savings Goal</h2>
+            <h3>New Laptop</h3>
+            <p>R8,000 of R10,000 saved</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <p class="percentage">80% Complete</p>
+        </section>
+
+        <section class="actions">
+            <button onclick="addIncome(500)" class="income">Add Income</button>
+            <button onclick="addExpense(200)" class="expense">Add Expense</button>
+            <button onclick="addGoal()" class="goal">Add Goal</button>
+            <button onclick="exportPDF()" class="wallet">Export PDF</button>
+        </section>
+
+        <section class="wallet-card">
+            <h2>My Wallet</h2>
+            <p class="balance">R <span id="balance">0.00</span></p>
+            <div class="wallet-info">
+                <div>
+                    <h4>Income</h4>
+                    <p id="income">R0.00</p>
+                </div>
+                <div>
+                    <h4>Expenses</h4>
+                    <p id="expense">R0.00</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="chart-box">
+            <h3>Spending Overview</h3>
+            <canvas id="financeChart"></canvas>
+        </section>
+
+        <section class="goals-box">
+            <h3>Savings Goals</h3>
+            <input type="text" id="goalName" placeholder="Goal name">
+            <input type="number" id="goalAmount" placeholder="Target amount">
+            <button onclick="addGoal()">Add Goal</button>
+            <ul id="goalList"></ul>
+        </section>
+
+        <section class="report-card">
+            <h3>Monthly Income</h3>
+            <p id="incomeReport">R0</p>
+        </section>
+        <section class="report-card">
+            <h3>Monthly Expenses</h3>
+            <p id="expenseReport">R0</p>
+        </section>
+
+        <div id="notification"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="Javascript.js"></script>
+    </main>
+</body>
+</html>
+
+    

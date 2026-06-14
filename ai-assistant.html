@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetBuddy AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header class="top-header">
+            <div>
+                <h1>AI Financial Assistant</h1>
+                <p>Ask for money-saving tips and budget advice.</p>
+            </div>
+            <nav class="top-nav">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="wallet.html">Wallet</a>
+                <a href="goals.html">Goals</a>
+                <a href="reports.html">Reports</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+        </header>
+
+        <section class="ai-box">
+            <h3>Ask the assistant</h3>
+            <input type="text" id="aiInput" placeholder="Ask something...">
+            <button onclick="askAI()">Ask</button>
+            <p id="aiResponse"></p>
+        </section>
+    </main>
+
+    <script src="Javascript.js"></script>
+    <script src="ai-assistant.js"></script>
+</body>
+</html>
